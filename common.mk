@@ -208,9 +208,9 @@ PRODUCT_PACKAGES += \
     init.qti.kernel.rc \
     init.target.rc \
     init.qcom.factory.rc \
-    init.sm8550.rc \
-    init.recovery.qcom.rc
+    init.sm8550.rc
 
+PRODUCT_PACKAGES += init.recovery.qcom.rc
 PRODUCT_COPY_FILES += \
     device/xiaomi/common/init/init.secure-hardware.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.secure-hardware.rc
 
@@ -410,8 +410,8 @@ PRODUCT_COPY_FILES += \
 
 # Ueventd
 PRODUCT_PACKAGES += \
-    ueventd.qcom.rc \
-    ueventd-odm.rc
+    ueventd-odm.rc \
+    ueventd.qcom.rc
 
 # Update engine
 PRODUCT_PACKAGES += \
