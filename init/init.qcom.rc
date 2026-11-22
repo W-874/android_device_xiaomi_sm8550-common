@@ -367,8 +367,6 @@ on post-fs-data
     mkdir /data/vendor/fm 0770 system system
     chmod 0770 /data/vendor/fm
 
-    mkdir /data/vendor/secure_element 0777 system system
-
     mkdir /data/vendor/nfc 0770 nfc nfc
 
     #Create IOP  deamon related dirs
@@ -784,11 +782,6 @@ service qseeproxydaemon /system/vendor/bin/qseeproxydaemon
     class late_start
     user system
     group system
-
-service esepmdaemon /system/vendor/bin/esepmdaemon
-    class core
-    user system
-    group nfc
 
 on charger
     setprop persist.sys.usb.config mass_storage

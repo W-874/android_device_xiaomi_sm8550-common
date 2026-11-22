@@ -1,0 +1,4 @@
+ro.vendor.se.chip.model=SN110T
+ro.vendor.se.info=17-673904
+ro.vendor.se.type=eSE,HCE,UICC
+ro.vendor.nfc.wallet_fusion=1

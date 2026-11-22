@@ -173,6 +173,7 @@ include device/lineage/sepolicy/libperfmgr/sepolicy.mk
 
 # System properties
 TARGET_ODM_PROP += $(COMMON_PATH)/configs/properties/odm.prop
+TARGET_ODM_PROP += $(COMMON_PATH)/configs/properties/secure_element.prop
 TARGET_PRODUCT_PROP += $(COMMON_PATH)/configs/properties/product.prop
 TARGET_SYSTEM_PROP += $(COMMON_PATH)/configs/properties/system.prop
 TARGET_SYSTEM_EXT_PROP += $(COMMON_PATH)/configs/properties/system_ext.prop
@@ -188,6 +189,7 @@ DEVICE_FRAMEWORK_MANIFEST_FILE += $(COMMON_PATH)/configs/vintf/framework_manifes
 DEVICE_MANIFEST_FILE := \
     $(COMMON_PATH)/configs/vintf/manifest_kalama.xml \
     $(COMMON_PATH)/configs/vintf/manifest_xiaomi.xml
+DEVICE_MANIFEST_FILE += $(COMMON_PATH)/configs/vintf/manifest_secure_hardware.xml
 
 # Vendor security patch
 VENDOR_SECURITY_PATCH := 2026-08-01
