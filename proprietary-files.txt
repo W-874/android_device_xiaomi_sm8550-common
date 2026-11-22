@@ -1,5 +1,4 @@
-## All proprietary files from this list, unless pinned and noted otherwise,
-## are from Xiaomi 13 Pro (OS3.0.312.0.WMBCNXM).
+# Blobs from fuxi (OS3.0.309.0.WMCCNXM).
 
 # ACDBs
 vendor/etc/acdbdata/ffv_models/ffv__5.0.1_0.1__3.0.0_0.0__eai_2.10_enpu3.pmd
@@ -262,9 +261,6 @@ vendor/lib64/libqcmaputils.so
 vendor/lib64/libqdi.so
 vendor/lib64/libqdp.so
 
-# Diag - from diting OS3.0.1.0.VLFCNXM
-vendor/etc/init/vendor.qti.diag.rc|fa77cf69d53a72f10489c8019f883dab08b2a07e
-
 # Diag
 system_ext/lib64/vendor.qti.diaghal@1.0.so
 vendor/bin/diag-router
@@ -322,8 +318,8 @@ vendor/lib64/libtestutils.so
 vendor/lib64/libtinyxml2_1.so
 vendor/lib64/libvmfilexfer.so
 
-# Display (SDM) - from  rtwo_g-user 14 U1TR34.8-30-13-2-2 5b4b0d-dde58 release-keys
-vendor/lib64/libsdm-color.so|c36b857c03f1ac8e89882fd59812ae501e4c9772
+# Display (SDM color)
+vendor/lib64/libsdm-color.so
 
 # Display calibration data
 vendor/etc/display/LUT0.txt
@@ -556,11 +552,9 @@ vendor/lib64/libllvm-qgl.so
 # Graphics (Vulkan)
 vendor/lib64/hw/vulkan.adreno.so
 
-# Hotword Enrollment - from vermeer OS2.0.207.0.VNKMIXM
-product/priv-app/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND.apk|368fc8e844306eef0effa37a02040da356d9b1e3
-product/priv-app/HotwordEnrollmentYGoogleHEXAGON_WIDEBAND/HotwordEnrollmentYGoogleHEXAGON_WIDEBAND.apk|1c18b1e33ee0dcfbaeb8d94cbd6f655259e332c3
-system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml|01b74943dc0ae9353883298d36fba94128536c9e
-system_ext/framework/com.android.hotwordenrollment.common.util.jar|86baa7f5ff304ca3dae863a6954ec6b285ff984c
+# Hotword Enrollment
+system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
+system_ext/framework/com.android.hotwordenrollment.common.util.jar
 
 # IMS (system)
 system/lib64/vendor.qti.diaghal-V1-ndk.so
@@ -708,12 +702,12 @@ vendor/lib64/vendor.qti.hardware.limits@1.0.so
 vendor/lib64/vendor.qti.hardware.limits@1.1.so
 vendor/lib64/vendor.qti.hardware.limits@1.2.so
 
-# MLIPAY - from diting OS3.0.1.0.VLFCNXM
-vendor/bin/mlipayd@1.1|08631f9b3dc1c27c723361a80140e87c9b534c28
-vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc|b5ab5bcd031fe4d9781b5911c0595eaeac8b80ea
-vendor/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.mlipay.xml|27aaea2ab58ace6555a634dc60ea062736342eb4
-vendor/lib64/libmlipay.so|254d4ef0ceccde3cccb240a0bfa83a299adf910b
-vendor/lib64/libmlipay@1.1.so|88787740a8a99dcf363d77711bfc1a886c68b288
+# MLIPAY (stock fuxi ODM)
+odm/bin/mlipayd@1.1
+odm/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc
+odm/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.mlipay.xml
+odm/lib64/libmlipay.so
+odm/lib64/libmlipay@1.1.so
 
 # MMI
 vendor/bin/hw/vendor.qti.hardware.factory@1.0-service
@@ -724,7 +718,7 @@ vendor/lib64/vendor.qti.hardware.factory@1.0.so
 vendor/lib64/vendor.qti.hardware.factory@1.1.so
 
 # Media
-system_ext/lib64/libmmosal.so
+system_ext/lib64/libmmosal.so|bf2b8e9d8bf19a89b9f6df55043349f2aea495ac
 system_ext/lib64/libmmparser_lite.so
 vendor/bin/hw/qconfigservice
 vendor/bin/hw/vendor.qti.media.c2@1.0-service
@@ -742,7 +736,7 @@ vendor/etc/vintf/manifest/vendor.qti.hardware.qconfig@1.0-service.xml
 vendor/lib64/libEvrcSwCodec.so
 vendor/lib64/libQcelp13SwCodec.so
 vendor/lib64/libdsd2pcm.so
-vendor/lib64/libmmosal_vendor.so
+vendor/lib64/libmmosal_vendor.so|edd62592cf438e3180a3198a3593dbcf9ff6e577
 vendor/lib64/libqc2audio_base.so
 vendor/lib64/libqc2audio_basecodec.so
 vendor/lib64/libqc2audio_core.so
@@ -928,9 +922,7 @@ vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
 system_ext/etc/init/qspa_system.rc
 system_ext/etc/qspa/qspa_default.rc
 
-# RIL (Esim hooking) - from fuxi OS2.0.200.7.VMCCNXM
-system_ext/framework/mirilhook.jar|1eef4d279b1180ae5ea4095a20ebd18891a9dae5
-system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|cdbd5157e63394d1ce96630f88de5186f9d821d9
+system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 
 # RIL
 system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
@@ -1144,9 +1136,6 @@ vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
 vendor/lib64/vendor.xiaomi.sensor.citsensorservice@1.1.so
 vendor/lib64/vendor.xiaomi.sensor.citsensorservice@2.0.so
 
-# Soter - from diting OS3.0.1.0.VLFCNXM
-vendor/app/SoterService/SoterService.apk|5cef7d2bc300af3fc2d7e72c6b02c54e245eb637
-
 # Soter
 vendor/bin/hw/vendor.qti.hardware.soter@1.0-service
 vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
@@ -1252,8 +1241,8 @@ vendor/etc/wifi/passpointProfile.conf
 vendor/etc/wifi/vendor_cmd.xml
 vendor/etc/wifi/wpa_supplicant_overlay.conf
 
-# WiFi Display (system) - from marvel_g A171WEH.20
-system/framework/WfdCommon.jar;BOOT_JAR|27251f8421652af8abffb1f3fd9449fe0ec64ee5|6d1f1d953c48a414e978263256e2ed3aec1580b7
+# WiFi Display (system) - LineageOS 24.0 fuxi 20261116
+system/framework/WfdCommon.jar;BOOT_JAR|05c9220c2111f304ce37d48ea6fa638f47c2ed39
 system_ext/bin/wfdservice64|6b738758fe3d21d6d53d3fb522e1321b54592fa9
 system_ext/etc/init/wfdservice.rc|907def8565d8f91f531ca7dfad880af05d540b0c
 system_ext/etc/permissions/wfd-system-ext-privapp-permissions-qti.xml|6669d5ee462c981663b8ac573d84d334e4eed96c
@@ -1271,7 +1260,7 @@ system_ext/lib64/libwfdmmsink.so|a250fd4085ec04345db8067f11962f57c3b166f0
 system_ext/lib64/libwfdmmsrc_system.so|69e08746a9557ee5fba3e02a8170032db0fa0105
 system_ext/lib64/libwfdnative.so;SYMLINK=system_ext/priv-app/WfdService/lib/arm64/libwfdnative.so|923acb22f26dc3aab5115cf685a161611e43c018
 system_ext/lib64/libwfdrtsp.so|14eec96c4fa615096c473d5a269ba315a53cfd00
-system_ext/lib64/libwfdservice.so|429839b831a8b16fb858179241dc6183c50bdf13|54624fd8c8ef2932e71c4b3ce176fb712e884f5a
+system_ext/lib64/libwfdservice.so|54624fd8c8ef2932e71c4b3ce176fb712e884f5a
 system_ext/lib64/libwfdsinksm.so|e714120166d6480ada0b629ddd73c499c73c55a2
 system_ext/lib64/libwfduibcinterface.so|62a596c93efa57bdc79b078d74a3ccf4d19d1f58
 system_ext/lib64/libwfduibcsink.so|a6fc5d0245e23648812a535f7338d562c9317f09
@@ -1280,45 +1269,45 @@ system_ext/lib64/libwfduibcsrc.so|ac3e0988fb5c36c6c4561f04e0e5d53d7de2ad76
 system_ext/lib64/libwfduibcsrcinterface.so|d19e9b5c35f61cc696a9c999dce6eb11d781bd8c
 system_ext/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so|7b3051498476202797fce711a6dcc42ae6a7b8ea
 system_ext/lib64/vendor.qti.hardware.wifidisplaysession_aidl-V2-ndk.so|b2f864d6ae621758bef6f4081af353e2e11e04d8
-system_ext/priv-app/WfdService/WfdService.apk|7d7e4ce1ec07338f1d2abf39035a8f44714a4a40
+system_ext/priv-app/WfdService/WfdService.apk|23fe75e29cef44519fe2a752101fcd0dd97c311b
 
-# WiFi Display (vendor)
-vendor/bin/wfdhdcphalservice
-vendor/bin/wfdvndservice
-vendor/bin/wifidisplayhalservice
-vendor/etc/init/android.hardware.drm@1.1-service.wfdhdcp.rc
-vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc
-vendor/etc/init/wfdvndservice.rc
-vendor/etc/seccomp_policy/wfdhdcphalservice.policy
-vendor/etc/seccomp_policy/wfdvndservice.policy
-vendor/etc/seccomp_policy/wifidisplayhalservice.policy
-vendor/etc/vintf/manifest/vendor.qti.hardware.wifidisplaysession-service.xml
-vendor/etc/wfdconfig.xml
-vendor/lib64/libFileMux_proprietary.so
-vendor/lib64/libmmrtpdecoder_vendor.so
-vendor/lib64/libmmrtpencoder_vendor.so
-vendor/lib64/libwfdcodecv4l2_proprietary.so
-vendor/lib64/libwfdcommonutils_proprietary.so
-vendor/lib64/libwfdconfigutils_proprietary.so
-vendor/lib64/libwfddisplayconfig_vendor.so
-vendor/lib64/libwfdhdcpcp.so
-vendor/lib64/libwfdhdcpservice_proprietary.so
-vendor/lib64/libwfdmminterface_proprietary.so
-vendor/lib64/libwfdmmservice_proprietary.so
-vendor/lib64/libwfdmmsrc_proprietary.so
-vendor/lib64/libwfdmodulehdcpsession.so
-vendor/lib64/libwfdrtsp_vendor.so
-vendor/lib64/libwfdsessionmodule.so
-vendor/lib64/libwfdsourcesession_proprietary.so
-vendor/lib64/libwfdsourcesm_proprietary.so
-vendor/lib64/libwfduibcinterface_vendor.so
-vendor/lib64/libwfduibcsink_vendor.so
-vendor/lib64/libwfduibcsinkinterface_vendor.so
-vendor/lib64/libwfduibcsrc_vendor.so
-vendor/lib64/libwfduibcsrcinterface_vendor.so
-vendor/lib64/libwfdutils_proprietary.so
-vendor/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so;MODULE_SUFFIX=-vendor
-vendor/lib64/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so
+# WiFi Display (vendor) - LineageOS 24.0 fuxi 20261116
+vendor/bin/wfdhdcphalservice|297dd2f2e6a88ca84a2bb2001c86a02fdceed1b2
+vendor/bin/wfdvndservice|1a3580b8310aa94009c26a053f8d0d7df59f769c
+vendor/bin/wifidisplayhalservice|01d75550702aa2c83b5e9fa890ee40e9bc2934e8
+vendor/etc/init/android.hardware.drm@1.1-service.wfdhdcp.rc|c266f08783a17f6583e3f22c85e55b0c200442ea
+vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc|576ce4393b7746b77a230745aa9e9ee3bd31b17d
+vendor/etc/init/wfdvndservice.rc|42e28fb8e0bf00620d7b9939b5bd3164ca671033
+vendor/etc/seccomp_policy/wfdhdcphalservice.policy|f7bb51d41ad6fbdfaa036e698b339e5134e0ef95
+vendor/etc/seccomp_policy/wfdvndservice.policy|0a65e2a2079a3ed9f2c56fe342ebfc08a38ba338
+vendor/etc/seccomp_policy/wifidisplayhalservice.policy|9787d71828c281a3c590c16b1bf707fb03a5a244
+vendor/etc/vintf/manifest/vendor.qti.hardware.wifidisplaysession-service.xml|d80adcbcb0650b7ec264bf0922a68ce44b885b1b
+vendor/etc/wfdconfig.xml|49425f4d889f7e75b41928ffd27102740cf1ee6c
+vendor/lib64/libFileMux_proprietary.so|c5402266f0acb7636c2031b75df6b65af7666db1
+vendor/lib64/libmmrtpdecoder_vendor.so|cf5d4098727703cca3154865ae7780a60e8d63f3
+vendor/lib64/libmmrtpencoder_vendor.so|cee42cd8db7ee136bc72cf326ddab4a340e9e217
+vendor/lib64/libwfdcodecv4l2_proprietary.so|2609c5fd0b2fa8885480a53df920d549c8d94707
+vendor/lib64/libwfdcommonutils_proprietary.so|562d8a08ba19c1a9a28bcc60f60b411020d98117
+vendor/lib64/libwfdconfigutils_proprietary.so|7a530187b01539b4d0cea71e1938958bad69bc25
+vendor/lib64/libwfddisplayconfig_vendor.so|3dc248d023f11f9185e7355f3b0a6a5232fa3991
+vendor/lib64/libwfdhdcpcp.so|b229d031e1038ca3671718bd70c5c7296d368736
+vendor/lib64/libwfdhdcpservice_proprietary.so|72f0c17341a436f7f627f4ce92edfbf861b224de
+vendor/lib64/libwfdmminterface_proprietary.so|5c2f7ef42413b7ddb9078e54296dc30ec4256b7d
+vendor/lib64/libwfdmmservice_proprietary.so|c3300bbd13d54aa15241c741111d9a29ba854a88
+vendor/lib64/libwfdmmsrc_proprietary.so|1b4aa4941a52c946cfce0d0a59f2a2f4159a8652
+vendor/lib64/libwfdmodulehdcpsession.so|66f206a7dd92ffea9d1858e28449d838b2cbd454
+vendor/lib64/libwfdrtsp_vendor.so|ea1e62ae990ee50eb60e1a5e7783d78ec722123c
+vendor/lib64/libwfdsessionmodule.so|3c1ca75d530c5cad7dc8b4df7f7179dd64a10dbc
+vendor/lib64/libwfdsourcesession_proprietary.so|edfd5c86abcf86c3742ce768e302561b4a694d43
+vendor/lib64/libwfdsourcesm_proprietary.so|7d293f1fbf9041701d8b53c7b1b5e5e0f78c8f86
+vendor/lib64/libwfduibcinterface_vendor.so|30b71a351a79b2adddeb2f0ea5731d71f91fd490
+vendor/lib64/libwfduibcsink_vendor.so|1bd266be5a459261881e684ec9f70b4e1aceeacf
+vendor/lib64/libwfduibcsinkinterface_vendor.so|23017dc1c122fef4ebdceefb4e6c9124f522a445
+vendor/lib64/libwfduibcsrc_vendor.so|06f211c938c0e997b3051dc083ab2b9c14b4392d
+vendor/lib64/libwfduibcsrcinterface_vendor.so|0db5f6783afea4461da3bd1b198fc8374a3f586c
+vendor/lib64/libwfdutils_proprietary.so|ecf91c87538ad513f70794fb1169322fe5757b7f
+vendor/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so;MODULE_SUFFIX=-vendor|a6d514c137601dec33be1e284349e6763bb7622c
+vendor/lib64/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so|738f28bb068af0a495273307e00cc0c135ed07c9
 
 # Widevine DRM
 odm/lib64/libwvkeybox.so
