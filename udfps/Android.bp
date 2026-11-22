@@ -14,8 +14,8 @@ cc_library {
     static_libs: [
         "android.hardware.biometrics.fingerprint-V4-ndk",
     ],
+    local_include_dirs: ["uapi"],
     header_libs: [
-        "generated_kernel_headers",
         "//hardware/xiaomi:xiaomifingerprint_headers",
     ],
 }
