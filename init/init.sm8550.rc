@@ -12,6 +12,13 @@ on early-boot
     mkdir /data/vendor/modem 0777 root root
     mkdir /data/vendor/modem/diag_logs 0777 root root
 
+    # Charger
+    wait /sys/class/qcom-battery
+    chown system system /sys/class/qcom-battery/input_suspend
+    chown system system /sys/class/qcom-battery/reverse_chg_mode
+    chmod 0644 /sys/class/qcom-battery/input_suspend
+    chmod 0644 /sys/class/qcom-battery/reverse_chg_mode
+
 on early-init
     export ADSP_LIBRARY_PATH /odm/lib/rfsa/adsp;/vendor/lib/rfsa/adsp/;/system/lib/rfsa/adsp;/system/vendor/lib/rfsa/adsp;/dsp
     # set tcp_mtu_probing to 1
@@ -99,13 +106,6 @@ on boot
     # High touch polling rate
     chown system system /sys/devices/virtual/touch/touch_dev/bump_sample_rate
     chmod 0660 /sys/devices/virtual/touch/touch_dev/bump_sample_rate
-
-    # Charger
-    wait /sys/class/qcom-battery
-    chown system system /sys/class/qcom-battery/input_suspend
-    chown system system /sys/class/qcom-battery/reverse_chg_mode
-    chmod 0644 /sys/class/qcom-battery/input_suspend
-    chmod 0644 /sys/class/qcom-battery/reverse_chg_mode
 
 on post-fs-data
     mkdir /data/vendor/misc 01771 system system
